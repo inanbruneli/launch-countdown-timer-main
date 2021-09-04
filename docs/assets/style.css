@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Text', sans-serif;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/bg-stars.svg), linear-gradient(hsl(234, 17%, 12%), hsl(235, 16%, 14%), hsl(236, 21%, 26%));
+    background-position: bottom right;
+}
+
+.main {
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    padding-top: 200px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+
+.main-title {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.6em;
+    letter-spacing: 8px;
+    word-spacing: 10px;
+    font-weight: 700;
+    padding: 0 5vw;
+}
+
+.footer {
+    background-image: url(../images/pattern-hills.svg);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer img {
+    width: 35px;
+    height: 35px;
+}
+
+.footer img:nth-child(2) {
+    margin: 0 40px;
+}
+
+.timer {
+    margin-bottom: 200px;
+    padding-left: 30px;
+    height: 150px;
+    max-width: 670px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.number {
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, .9);
+    border-radius: 8px;
+    height: 100px;
+    width: 110px;
+    background-image: linear-gradient(rgb(30, 32, 56) 50%, rgb(52, 54, 80) 50%);
+    padding-right: 2px;
+    padding-top: 15px;
+}
+
+.number-main {
+    font-size: 72px;
+    background: -webkit-linear-gradient(hsl(345, 48%, 52%) 50%, hsl(345, 95%, 68%) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5em;
+    text-align: center;
+    letter-spacing: -3px;
+}
+
+.number-descript {
+    text-align: center;
+    margin-top: 30px;
+    color: hsl(237, 18%, 59%);
+    font-size: .6em;
+    letter-spacing: 5px;
+}
+
+#days {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in;
+}
+
+@media screen and (min-width: 1000px) {
+    .number {
+        height: 120px;
+        width: 132px;
+    }
+    .number-main {
+        font-size: 4em;
+    }
+}
